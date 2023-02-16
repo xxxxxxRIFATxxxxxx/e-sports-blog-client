@@ -1575,4 +1575,9 @@ textarea.input {
     float: left;
     margin-left: 0px;
   }
+
+  .hot-post .hot-post-right {
+    padding-right: 0;
+    padding-left: 0px;
+  }
 }
