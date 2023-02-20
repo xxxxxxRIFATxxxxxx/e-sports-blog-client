@@ -8,16 +8,16 @@ const Hero_main = () => {
         <>
 
 
-            <div class="section">
+            <div className="section">
 
-            <div class="container">
+            <div className="container">
 
-                <div id="hot-post" class="row hot-post g-5">
-                    <div class="col-md-8 hot-post-left">
+                <div id="hot-post" className="row hot-post g-5">
+                    <div className="col-md-8 hot-post-left">
                         <Big_post_component />
                     </div>
 
-                    <div class="col-md-4 hot-post-right">
+                    <div className="col-md-4 hot-post-right">
                     <Small_post_component />
                     <Small_post_component />
                     </div>

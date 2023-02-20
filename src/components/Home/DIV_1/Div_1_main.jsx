@@ -3,21 +3,25 @@ import Recent_post_component from './Recent_post_component';
 import "./Div_1_main.css"
 import Ads from '../../Common/Ads/Ads';
 import Newsletter_component from '../../Common/Newsletter/Newsletter_component';
+import Categories_component from '../../Common/Categories/Categories_component';
+
 
 const Div_1_main = () => {
     return (
         <>
-        <div class="section">
+        <div className="section">
 
-    <       div class="container">
+    <       div className="container">
 
-                <div class="row">
-                    <div class="col-md-8">
+                <div className="row">
+                    <div className="col-md-8">
                         <Recent_post_component />
                     </div>
-                    <div class="col-md-4">
+                    <div className="col-md-4">
                         <Ads />
                         <Newsletter_component />
+                        <Categories_component />
+                        
                     </div>
                 </div>
 
