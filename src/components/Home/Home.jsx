@@ -9,21 +9,17 @@ import Hero_main from "./DIV_Hero/Hero_main";
 import "./Home.css";
 
 const Home = () => {
-    return (
-        <>
-        <Header />
-        <Hero_main/>
-        <Div_1_main />
-        <Wideads />
-        <Div_2_main />
-        <DIV_3_main />
-        <Footer />
-
-        </>
-           
-            
- 
-    );
+  return (
+    <>
+      <Header />
+      <Hero_main />
+      <Div_1_main />
+      <Wideads />
+      <Div_2_main />
+      <DIV_3_main />
+      <Footer />
+    </>
+  );
 };
 
 export default Home;

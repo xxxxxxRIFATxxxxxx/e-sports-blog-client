@@ -10,39 +10,39 @@ import Contact from "./components/Contact/Contact";
 import Advertise from "./components/Advertise/Advertise";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Home />,
-    },
+  {
+    path: "/",
+    element: <Home />,
+  },
 
-    {
-        path: "/postDetails/:postId",
-        element: <PostDetails />,
-    },
+  {
+    path: "/postDetails",
+    element: <PostDetails />,
+  },
 
-    {
-        path: "/category",
-        element: <Category />,
-    },
+  {
+    path: "/category",
+    element: <Category />,
+  },
 
-    {
-        path: "/about",
-        element: <About />,
-    },
+  {
+    path: "/about",
+    element: <About />,
+  },
 
-    {
-        path: "/contact",
-        element: <Contact />,
-    },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
 
-    {
-        path: "/advertise",
-        element: <Advertise />,
-    },
+  {
+    path: "/advertise",
+    element: <Advertise />,
+  },
 ]);
 
 function App() {
-    return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
