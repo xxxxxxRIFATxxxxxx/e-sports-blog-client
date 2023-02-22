@@ -1,4 +1,5 @@
 import React from "react";
+import useBlogs from "../../hooks/useBlogs";
 import Wideads from "../Common/Ads/Wideads";
 import Footer from "../Common/Footer/Footer";
 import Header from "../Common/Header/Header";
@@ -9,10 +10,11 @@ import Hero_main from "./DIV_Hero/Hero_main";
 import "./Home.css";
 
 const Home = () => {
+  const { blogs } = useBlogs();
   return (
     <>
       <Header />
-      <Hero_main />
+      <Hero_main blogs={blogs} />
       <Div_1_main />
       <Wideads />
       <Div_2_main />
