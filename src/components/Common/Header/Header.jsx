@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -63,7 +64,7 @@ const Header = () => {
           <div className="container">
             <ul className="nav-menu">
               <li className="">
-                <a href="index.html">হোম</a>
+                <Link>হোম</Link>
               </li>
               <li className="has-dropdown ">
                 <a href="#">ক্যাটেগরীজ</a>
@@ -81,7 +82,7 @@ const Header = () => {
                 <a href="#">ফিক্সচারস</a>
               </li>
               <li>
-                <a href="#">ব্লগস</a>
+                <Link>ব্লগস</Link>
               </li>
               <li>
                 <a href="#">ভিডিও</a>

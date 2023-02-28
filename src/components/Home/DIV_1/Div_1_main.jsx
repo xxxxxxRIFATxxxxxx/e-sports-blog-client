@@ -5,7 +5,7 @@ import Ads from "../../Common/Ads/Ads";
 import Newsletter_component from "../../Common/Newsletter/Newsletter_component";
 import Categories_component from "../../Common/Categories/Categories_component";
 
-const Div_1_main = ({ blogs }) => {
+const Div_1_main = ({ blogs, categories }) => {
   return (
     <>
       <div className="section">
@@ -17,7 +17,7 @@ const Div_1_main = ({ blogs }) => {
             <div className="col-md-4">
               <Ads />
               <Newsletter_component />
-              <Categories_component />
+              <Categories_component categories={categories} />
             </div>
           </div>
         </div>

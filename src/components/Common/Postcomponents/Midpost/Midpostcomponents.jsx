@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Midpostcomponents.css";
 
 const Midpostcomponents = ({ blog }) => {
   return (
     <div className="col-md-4">
       <div className="post post-sm">
-        <a className="post-img" href="blog-post.html">
+        <Link className="post-img" to={`/PostDetails?blogId=${blog?._id}`}>
           <img src={blog?.thumbnail} alt="" />
-        </a>
+        </Link>
         <div className="post-body">
           <div className="post-category">
             <a href="category.html">{blog?.category}</a>

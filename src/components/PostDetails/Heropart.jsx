@@ -1,15 +1,17 @@
 import React from "react";
 import "./PostDetails.css";
 
-const Heropart = () => {
+const Heropart = ({ blog }) => {
   return (
     <div>
       <div id="post-header" class="page-header">
         <div
           class="page-header-bg"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1597600599980-d528ba24fe9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
+            backgroundImage: `url("${blog?.thumbnail}")`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
           }}
           data-stellar-background-ratio="0.5"
         ></div>
@@ -19,15 +21,12 @@ const Heropart = () => {
               <div class="post-category">
                 <a href="category.html">Lifestyle</a>
               </div>
-              <h1>
-                Mel ut impetus suscipit tincidunt. Cum id ullum laboramus
-                persequeris.
-              </h1>
+              <h1>{blog?.title}</h1>
               <ul class="post-meta">
                 <li>
-                  <a href="author.html">John Doe</a>
+                  <a href="author.html">{blog?.author}</a>
                 </li>
-                <li>20 April 2018</li>
+                <li>{blog?.createdAt}</li>
                 <li>
                   <i class="fa fa-eye"></i> 807
                 </li>

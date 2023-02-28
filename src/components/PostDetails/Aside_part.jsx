@@ -7,14 +7,14 @@ import Newsletter_component from "../Common/Newsletter/Newsletter_component";
 import Popular_post_component from "../Common/Popular_post/Popular_post_component";
 import Social_media from "../Common/Social_followers/Social_media";
 
-const Aside_part = () => {
+const Aside_part = ({ categories }) => {
   return (
     <>
       <Ads />
       <Social_media />
-      <Categories_component />
+      <Categories_component categories={categories} />
       <Newsletter_component />
-      <Popular_post_component />
+      {/* <Popular_post_component /> */}
       {/* <Instaapi_component /> */}
       {/* <ADS_BOTTOM /> */}
     </>

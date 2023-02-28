@@ -1,7 +1,8 @@
 import React from "react";
 import "./Categories.css";
 
-const Categories_component = () => {
+const Categories_component = (categories) => {
+  console.log(categories);
   return (
     <div className="aside-widget">
       <div className="section-title">
@@ -9,31 +10,15 @@ const Categories_component = () => {
       </div>
       <div className="category-widget">
         <ul>
-          <li>
-            <a href="#">
-              Lifestyle <span>451</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Fashion <span>230</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Technology <span>40</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Travel <span>38</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Health <span>24</span>
-            </a>
-          </li>
+          {categories.categories.map((item) => {
+            return (
+              <li>
+                <a href="#">
+                  {item?.title} <span>40</span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

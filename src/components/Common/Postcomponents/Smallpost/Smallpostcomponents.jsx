@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Smallpostcomponents.css";
 
 const Smallpostcomponents = ({ blog }) => {
   return (
     <div className="post post-widget">
-      <a className="post-img" href="blog-post.html">
+      <Link className="post-img" to={`/PostDetails?blogId=${blog?._id}`}>
         <img src={blog?.thumbnail} alt="" />
-      </a>
+      </Link>
       <div className="post-body">
         <div className="post-category">
           <a href="category.html">{blog?.category}</a>

@@ -8,7 +8,7 @@ const useBlogs = () => {
 
   const getBlog = (id) => {
     const promise = new Promise((resolve, reject) => {
-      fetch(`${process.env.REACT_APP_API_URL}/blogs/${id}`)
+      fetch(`https://e-sports-blog-server.onrender.com/blogs/${id}`)
         .then((res) => res.json())
         .then((data) => {
           const result = data.result;
