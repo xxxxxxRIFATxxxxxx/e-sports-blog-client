@@ -10,10 +10,10 @@ const Smallpostcomponents = ({ blog }) => {
       </Link>
       <div className="post-body">
         <div className="post-category">
-          <a href="category.html">{blog?.category}</a>
+          <Link to={`/PostDetails?blogId=${blog?._id}`}>{blog?.category}</Link>
         </div>
         <h3 className="post-title">
-          <a href="blog-post.html">{blog?.title}</a>
+          <Link to={`/PostDetails?blogId=${blog?._id}`}>{blog?.title}</Link>
         </h3>
       </div>
     </div>

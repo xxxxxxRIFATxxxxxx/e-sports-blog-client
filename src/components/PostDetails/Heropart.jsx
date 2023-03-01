@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./PostDetails.css";
 
 const Heropart = ({ blog }) => {
@@ -19,12 +20,12 @@ const Heropart = ({ blog }) => {
           <div class="row">
             <div class="col-md-10">
               <div class="post-category">
-                <a href="category.html">Lifestyle</a>
+                <Link to={`/`}>Lifestyle</Link>
               </div>
               <h1>{blog?.title}</h1>
               <ul class="post-meta">
                 <li>
-                  <a href="author.html">{blog?.author}</a>
+                  <Link to={`/`}>{blog?.author}</Link>
                 </li>
                 <li>{blog?.createdAt}</li>
                 <li>

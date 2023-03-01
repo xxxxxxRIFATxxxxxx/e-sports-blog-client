@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Contact_body = () => {
   return (
@@ -19,14 +20,14 @@ const Contact_body = () => {
           </li>
           <li>
             <i className="fa fa-envelope"></i>{" "}
-            <a href="#">
+            <Link to={`/`}>
               <span
                 className="__cf_email__"
                 data-cfemail="82e1e3eeeeebe7c2e7efe3ebeeace1edef"
               >
                 [email&#160;protected]
               </span>
-            </a>
+            </Link>
           </li>
           <li>
             <i className="fa fa-map-marker"></i> 123 6th St.Melbourne, FL 32904

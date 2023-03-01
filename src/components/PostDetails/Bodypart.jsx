@@ -1,26 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Bodypart = ({ blog }) => {
   return (
     <div>
       <div class="section-row">
         <div class="post-share">
-          <a href="#" class="social-facebook">
+          <Link to={`/`} class="social-facebook">
             <i class="fa fa-facebook"></i>
             <span>Share</span>
-          </a>
-          <a href="#" class="social-twitter">
+          </Link>
+          <Link to={`/`} class="social-twitter">
             <i class="fa fa-twitter"></i>
             <span>Tweet</span>
-          </a>
-          <a href="#" class="social-pinterest">
+          </Link>
+          <Link to={`/`} class="social-pinterest">
             <i class="fa fa-pinterest"></i>
             <span>Pin</span>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to={`/`}>
             <i class="fa fa-envelope"></i>
             <span>Email</span>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -31,16 +32,16 @@ const Bodypart = ({ blog }) => {
           <ul>
             <li>TAGS:</li>
             <li>
-              <a href="#">Social</a>
+              <Link to={`/`}>Social</Link>
             </li>
             <li>
-              <a href="#">Lifestyle</a>
+              <Link to={`/`}>Lifestyle</Link>
             </li>
             <li>
-              <a href="#">Fashion</a>
+              <Link to={`/`}>Fashion</Link>
             </li>
             <li>
-              <a href="#">Health</a>
+              <Link to={`/`}>Health</Link>
             </li>
           </ul>
         </div>
@@ -49,14 +50,14 @@ const Bodypart = ({ blog }) => {
       <div class="section-row">
         <div class="section-title">
           <h3 class="title">
-            About <a href="author.html">সাদনিমা আমিন</a>
+            About <Link to={`/`}>সাদনিমা আমিন</Link>
           </h3>
         </div>
         <div class="author media">
           <div class="media-left">
-            <a href="author.html">
+            <Link to={`/`}>
               <img class="author-img media-object" src="" alt="" />
-            </a>
+            </Link>
           </div>
           <div class="media-body">
             <p>
@@ -68,24 +69,24 @@ const Bodypart = ({ blog }) => {
             </p>
             <ul class="author-social">
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i class="fa fa-facebook"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i class="fa fa-twitter"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i class="fa fa-google-plus"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i class="fa fa-instagram"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

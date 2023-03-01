@@ -6,7 +6,7 @@ const Top_posts = ({ blogs }) => {
     <>
       <div className="row">
         {blogs.map((item) => {
-          return <Top_big_post_component key={Math.random()} blog={item} />;
+          return <Top_big_post_component blog={item} />;
         })}
       </div>
     </>

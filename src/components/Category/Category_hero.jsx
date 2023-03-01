@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Category_hero = () => {
   return (
@@ -15,7 +16,7 @@ const Category_hero = () => {
         <div class="row">
           <div class="col-md-10">
             <div class="post-category">
-              <a href="category.html">Lifestyle</a>
+              <Link to={`/`}>Lifestyle</Link>
             </div>
             <h1>
               Mel ut impetus suscipit tincidunt. Cum id ullum laboramus
@@ -23,7 +24,7 @@ const Category_hero = () => {
             </h1>
             <ul class="post-meta">
               <li>
-                <a href="author.html">John Doe</a>
+                <Link to={`/`}>John Doe</Link>
               </li>
               <li>20 April 2018</li>
               <li>

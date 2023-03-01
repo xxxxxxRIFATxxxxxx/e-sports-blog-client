@@ -21,7 +21,6 @@ const CategoryPostContainer = ({ category }) => {
       </div>
 
       {categoryBlogs.map((blog) => {
-        console.log(blog);
         return <Midpostcomponents key={Math.random()} blog={blog} />;
       })}
     </div>

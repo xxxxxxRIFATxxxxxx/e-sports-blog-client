@@ -15,14 +15,16 @@ const Top_big_post_component = ({ blog }) => {
         </Link>
         <div className="post-body">
           <div className="post-category">
-            <a href="category.html">{blog?.category}</a>
+            <Link to={`/PostDetails?blogId=${blog?._id}`}>
+              {blog?.category}
+            </Link>
           </div>
           <h3 className="post-title">
-            <a href="blog-post.html">{blog?.title}</a>
+            <Link to={`/PostDetails?blogId=${blog?._id}`}>{blog?.title}</Link>
           </h3>
           <ul className="post-meta">
             <li>
-              <a href="author.html">{blog?.author}</a>
+              <Link to={`/`}>{blog?.author}</Link>
             </li>
             <li>{blog?.createdAt}</li>
           </ul>

@@ -21,7 +21,6 @@ const PostDetails = () => {
 
   useEffect(
     () => {
-      console.log(blogId);
       getBlog(blogId).then((data) => setBlog(data));
     },
     { blog }

@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Categories.css";
 
 const Categories_component = (categories) => {
-  console.log(categories);
   return (
     <div className="aside-widget">
       <div className="section-title">
@@ -13,9 +13,9 @@ const Categories_component = (categories) => {
           {categories.categories.map((item) => {
             return (
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   {item?.title} <span>40</span>
-                </a>
+                </Link>
               </li>
             );
           })}

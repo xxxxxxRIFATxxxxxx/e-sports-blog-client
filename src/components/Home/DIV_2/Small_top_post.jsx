@@ -7,7 +7,7 @@ const Small_top_post = ({ blogs }) => {
       <div className="row">
         {[0, 1, 2].map((item) => {
           return (
-            <div key={Math.random()} className="col-md-4">
+            <div className="col-md-4">
               <Smallpostcomponents blog={blogs[item]} />
               <Smallpostcomponents blog={blogs[item]} />
               <Smallpostcomponents blog={blogs[item]} />

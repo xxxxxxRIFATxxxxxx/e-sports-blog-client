@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import logo_main from "../../../images/logo/Dribble-Digest.png";
 
 const Header = () => {
   return (
@@ -10,31 +11,35 @@ const Header = () => {
           <div className="container">
             <ul className="nav-social">
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i className="fa fa-facebook"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i className="fa fa-twitter"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i className="fa fa-google-plus"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to={`/`}>
                   <i className="fa fa-instagram"></i>
-                </a>
+                </Link>
               </li>
             </ul>
 
-            <div className="nav-logo">
-              <a href="index.html" className="logo">
-                <img src="./img/logo.png" alt="" />
-              </a>
+            {/* <div className="nav-logo">
+              <Link to={`/`} className="logo logo_size">
+                <img src={logo_main} alt="" />
+              </Link>
+            </div> */}
+
+            <div>
+              <img src={logo_main} className="logo_size" />
             </div>
 
             <div className="nav-btns">
@@ -64,28 +69,28 @@ const Header = () => {
           <div className="container">
             <ul className="nav-menu">
               <li className="">
-                <Link>হোম</Link>
+                <Link to={`/`}>হোম</Link>
               </li>
               <li className="has-dropdown ">
-                <a href="#">ক্যাটেগরীজ</a>
+                <Link to={`/`}>ক্যাটেগরীজ</Link>
                 <div className="dropdown">
                   <div className="dropdown-body">
                     <ul className="dropdown-list">
                       <li>
-                        <a href="#">Lifestyle</a>
+                        <Link to={`/`}>Lifestyle</Link>
                       </li>
                     </ul>
                   </div>
                 </div>
               </li>
               <li>
-                <a href="#">ফিক্সচারস</a>
+                <Link to={`/`}>ফিক্সচারস</Link>
               </li>
               <li>
-                <Link>ব্লগস</Link>
+                <Link to={`/`}>ব্লগস</Link>
               </li>
               <li>
-                <a href="#">ভিডিও</a>
+                <Link to={`/`}>ভিডিও</Link>
               </li>
             </ul>
           </div>
@@ -94,27 +99,27 @@ const Header = () => {
         <div id="nav-aside">
           <ul className="nav-aside-menu">
             <li>
-              <a href="index.html">হোম</a>
+              <Link to={`/`}>হোম</Link>
             </li>
             <li className="has-dropdown">
-              <a>ক্যাটেগরীজ</a>
+              <Link>ক্যাটেগরীজ</Link>
               <ul className="dropdown">
                 <li>
-                  <a href="#">ক্যাটেগরীজ ১</a>
+                  <Link to={`/`}>ক্যাটেগরীজ ১</Link>
                 </li>
                 <li>
-                  <a href="#">ক্যাটেগরীজ ২</a>
+                  <Link to={`/`}>ক্যাটেগরীজ ২</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="about.html">এবাউট আস</a>
+              <Link to={`/`}>এবাউট আস</Link>
             </li>
             <li>
-              <a href="contact.html">কন্টাক্টস</a>
+              <Link to={`/`}>কন্টাক্টস</Link>
             </li>
             <li>
-              <a href="#">এডভারটাইয়স</a>
+              <Link to={`/`}>এডভারটাইয়স</Link>
             </li>
           </ul>
           <button className="nav-close nav-aside-close">
