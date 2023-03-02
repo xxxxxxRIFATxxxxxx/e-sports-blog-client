@@ -9,57 +9,57 @@ const Header = () => {
       <div id="nav">
         <div id="nav-top">
           <div className="container">
-            <ul className="nav-social">
-              <li>
-                <Link to={`/`}>
-                  <i className="fa fa-facebook"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to={`/`}>
-                  <i className="fa fa-twitter"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to={`/`}>
-                  <i className="fa fa-google-plus"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to={`/`}>
-                  <i className="fa fa-instagram"></i>
-                </Link>
-              </li>
-            </ul>
+            <div className="nav_top_bar">
+              <div className="social_icon">
+                <ul className="nav-social">
+                  <li>
+                    <Link to={`/`}>
+                      <i className="fa fa-facebook"></i>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`/`}>
+                      <i className="fa fa-twitter"></i>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`/`}>
+                      <i className="fa fa-google-plus"></i>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`/`}>
+                      <i className="fa fa-instagram"></i>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-            {/* <div className="nav-logo">
-              <Link to={`/`} className="logo logo_size">
-                <img src={logo_main} alt="" />
-              </Link>
-            </div> */}
+              <div className="">
+                <img src={logo_main} className="logo_size" />
+              </div>
 
-            <div>
-              <img src={logo_main} className="logo_size" />
-            </div>
-
-            <div className="nav-btns">
-              <button className="aside-btn">
-                <i className="fa fa-bars"></i>
-              </button>
-              <button className="search-btn">
-                <i className="fa fa-search"></i>
-              </button>
-              <div id="nav-search">
-                <form>
-                  <input
-                    className="input"
-                    name="search"
-                    placeholder="Enter your search..."
-                  />
-                </form>
-                <button className="nav-close search-close">
-                  <span></span>
-                </button>
+              <div className="">
+                <div className="nav-btns">
+                  <button className="aside-btn">
+                    <i className="fa fa-bars"></i>
+                  </button>
+                  <button className="search-btn">
+                    <i className="fa fa-search"></i>
+                  </button>
+                  <div id="nav-search">
+                    <form>
+                      <input
+                        className="input"
+                        name="search"
+                        placeholder="Enter your search..."
+                      />
+                    </form>
+                    <button className="nav-close search-close">
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Header = () => {
                 <Link to={`/`}>হোম</Link>
               </li>
               <li className="has-dropdown ">
-                <Link to={`/`}>ক্যাটেগরীজ</Link>
+                <Link to={`/category`}>ফুটবল লীগস</Link>
                 <div className="dropdown">
                   <div className="dropdown-body">
                     <ul className="dropdown-list">
@@ -102,7 +102,7 @@ const Header = () => {
               <Link to={`/`}>হোম</Link>
             </li>
             <li className="has-dropdown">
-              <Link>ক্যাটেগরীজ</Link>
+              <Link to={`/category`}>ক্যাটেগরীজ</Link>
               <ul className="dropdown">
                 <li>
                   <Link to={`/`}>ক্যাটেগরীজ ১</Link>
@@ -113,13 +113,13 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <Link to={`/`}>এবাউট আস</Link>
+              <Link to={`/about`}>এবাউট আস</Link>
             </li>
             <li>
-              <Link to={`/`}>কন্টাক্টস</Link>
+              <Link to={`/contact`}>কন্টাক্টস</Link>
             </li>
             <li>
-              <Link to={`/`}>এডভারটাইয়স</Link>
+              <Link to={`/advertise`}>এডভারটাইয়স</Link>
             </li>
           </ul>
           <button className="nav-close nav-aside-close">

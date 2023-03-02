@@ -17,6 +17,7 @@ const Home = () => {
   return (
     <>
       <Header />
+
       <Hero_main blogs={blogs.slice(0, 3)} />
       <Div_1_main blogs={blogs.slice(3, 7)} categories={categories} />
       <Wideads />

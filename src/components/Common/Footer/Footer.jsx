@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="footer-widget">
               <div className="footer-logo">
                 <Link to={`/`} className="logo">
-                  <img src={logo_main} alt="" />
+                  <img src="" alt="" />
                 </Link>
               </div>
               <p>

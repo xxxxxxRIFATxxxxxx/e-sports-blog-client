@@ -9,6 +9,7 @@ const Bigpostcomponents = ({ blog }) => {
         <Link className="post-img" to={`/PostDetails?blogId=${blog?._id}`}>
           <img src={blog?.thumbnail} alt="" />
         </Link>
+
         <div className="post-body">
           <div className="post-category">
             <Link to={`/`}>{blog?.category}</Link>
