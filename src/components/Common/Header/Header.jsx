@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import logo_main from "../../../images/logo/Dribble-Digest.png";
 
-const Header = () => {
+const Header = ({ categories }) => {
   return (
     <header id="header">
       <div id="nav">
@@ -76,21 +76,25 @@ const Header = () => {
                 <div className="dropdown">
                   <div className="dropdown-body">
                     <ul className="dropdown-list">
-                      <li>
-                        <Link to={`/`}>Lifestyle</Link>
-                      </li>
+                      {categories?.map((item) => {
+                        return (
+                          <li>
+                            <Link to={`/`}>{item?.title}</Link>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
               </li>
               <li>
-                <Link to={`/`}>ফিক্সচারস</Link>
+                <Link to={`/fixtures`}>ফিক্সচারস</Link>
               </li>
               <li>
-                <Link to={`/`}>ব্লগস</Link>
+                <Link to={`/allblogs`}>ব্লগস</Link>
               </li>
               <li>
-                <Link to={`/`}>ভিডিও</Link>
+                <Link to={`/videos`}>ভিডিও</Link>
               </li>
             </ul>
           </div>

@@ -1,8 +1,7 @@
 import React from "react";
 import Comming_soon from "../Common/Comming_soon/Comming_soon";
-import "./Advertise";
 
-const Advertise = () => {
+const All_blogs = () => {
   return (
     <>
       <Comming_soon />
@@ -10,4 +9,4 @@ const Advertise = () => {
   );
 };
 
-export default Advertise;
+export default All_blogs;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Instaapi.css";
+import insta_photo from "../../../images/instalogo/insta_post.png";
 
 const Instaapi_component = () => {
   return (
@@ -12,35 +13,32 @@ const Instaapi_component = () => {
         <ul>
           <li>
             <Link to={`/`}>
-              <img
-                src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1593&q=80"
-                alt=""
-              />
+              <img src={insta_photo} className="insta_post_pading" alt="" />
             </Link>
           </li>
           <li>
             <Link to={`/`}>
-              <img src="./img/galery-2.jpg" alt="" />
+              <img src={insta_photo} className="insta_post_pading" alt="" />
             </Link>
           </li>
           <li>
             <Link to={`/`}>
-              <img src="./img/galery-3.jpg" alt="" />
+              <img src={insta_photo} className="insta_post_pading" alt="" />
             </Link>
           </li>
           <li>
             <Link to={`/`}>
-              <img src="./img/galery-4.jpg" alt="" />
+              <img src={insta_photo} className="insta_post_pading" alt="" />
             </Link>
           </li>
           <li>
             <Link to={`/`}>
-              <img src="./img/galery-5.jpg" alt="" />
+              <img src={insta_photo} className="insta_post_pading" alt="" />
             </Link>
           </li>
           <li>
             <Link to={`/`}>
-              <img src="./img/galery-6.jpg" alt="" />
+              <img src={insta_photo} className="insta_post_pading" alt="" />
             </Link>
           </li>
         </ul>

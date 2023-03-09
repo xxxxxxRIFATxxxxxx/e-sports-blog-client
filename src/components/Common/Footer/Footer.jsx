@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 import logo_main from "../../../images/logo/Dribble-Digest.png";
 
-const Footer = () => {
+const Footer = ({ categories }) => {
   return (
     <footer id="footer">
       <div className="container">
         <div className="row">
           <div className="col-md-3">
             <div className="footer-widget">
-              <div className="footer-logo">
+              <div className="footer-logo image_align">
                 <Link to={`/`} className="logo">
-                  <img src="" alt="" />
+                  <img src={logo_main} className="size_logo" alt="" />
                 </Link>
               </div>
               <p>
-                Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl
-                purus in mollis nunc sed. Nunc non blandit massa enim nec.
+                আমার স্পোর্টস ব্লগ সাইট সম্পর্কে 100 লাইনের বিষয়বস্তু: আমি
+                বিশ্বাস করি যে আমার স্পোর্টস ব্লগ সাইটটি আপনাদের সামগ্রিক আশ্রয়
               </p>
               <ul className="contact-social">
                 <li>
@@ -48,31 +48,13 @@ const Footer = () => {
               <h3 className="footer-title">Categories</h3>
               <div className="category-widget">
                 <ul>
-                  <li>
-                    <Link to={`/`}>
-                      Lifestyle <span>451</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>
-                      Fashion <span>230</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>
-                      Technology <span>40</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>
-                      Travel <span>38</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>
-                      Health <span>24</span>
-                    </Link>
-                  </li>
+                  {categories?.map((item) => {
+                    return (
+                      <li>
+                        <Link to={`/`}>{item?.title}</Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -84,36 +66,6 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link to={`/`}>Social</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Lifestyle</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Blog</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Travel</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Technology</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Fashion</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Life</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>News</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Magazine</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Food</Link>
-                  </li>
-                  <li>
-                    <Link to={`/`}>Health</Link>
                   </li>
                 </ul>
               </div>
@@ -161,11 +113,8 @@ const Footer = () => {
           </div>
           <div className="col-md-6 col-md-pull-6">
             <div className="footer-copyright">
-              Copyright &copy;
               <script>document.write(new Date().getFullYear());</script> All
-              rights reserved | This template is made with{" "}
-              <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-              <Link to={`/`}></Link>
+              rights reserved | by <Link to={`/`}></Link>
             </div>
           </div>
         </div>

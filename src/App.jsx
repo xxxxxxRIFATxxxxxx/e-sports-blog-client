@@ -8,6 +8,9 @@ import Category from "./components/Category/Category";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Advertise from "./components/Advertise/Advertise";
+import Video_blogs from "./components/Videos_blogs/Video_blogs";
+import Fixtures from "./components/fixtures_blogs/Fixtures";
+import All_blogs from "./components/ALL_blogs_page/All_blogs";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +41,19 @@ const router = createBrowserRouter([
   {
     path: "/advertise",
     element: <Advertise />,
+  },
+  {
+    path: "/videos",
+    element: <Video_blogs />,
+  },
+  {
+    path: "/fixtures",
+    element: <Fixtures />,
+  },
+
+  {
+    path: "/allblogs",
+    element: <All_blogs />,
   },
 ]);
 

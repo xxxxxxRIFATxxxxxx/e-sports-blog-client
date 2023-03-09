@@ -1,4 +1,5 @@
 import React from "react";
+import Comming_soon from "../Common/Comming_soon/Comming_soon";
 import Footer from "../Common/Footer/Footer";
 import Header from "../Common/Header/Header";
 import Bigpostcomponents from "../Common/Postcomponents/Bigpost/Bigpostcomponents";
@@ -9,7 +10,7 @@ import Category_hero from "./Category_hero";
 const Category = () => {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Category_hero />
       <div class="section">
         <div class="container">
@@ -30,7 +31,8 @@ const Category = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer /> */}
+      <Comming_soon />
     </>
   );
 };

@@ -13,17 +13,18 @@ import "./Home.css";
 const Home = () => {
   const { blogs } = useBlogs();
   const { categories } = useCategories();
+  console.log(categories);
 
   return (
     <>
-      <Header />
+      <Header categories={categories} />
 
       <Hero_main blogs={blogs.slice(0, 3)} />
       <Div_1_main blogs={blogs.slice(3, 7)} categories={categories} />
       <Wideads />
       <Div_2_main blogs={blogs.slice(0, 10)} />
       <DIV_3_main blogs={blogs.slice(0, 10)} />
-      <Footer />
+      <Footer categories={categories} />
     </>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Categories.css";
 
-const Categories_component = (categories) => {
+const Categories_component = ({ categories }) => {
   return (
     <div className="aside-widget">
       <div className="section-title">
@@ -10,7 +10,7 @@ const Categories_component = (categories) => {
       </div>
       <div className="category-widget">
         <ul>
-          {categories.categories.map((item) => {
+          {categories?.map((item) => {
             return (
               <li>
                 <Link to={`/`}>
