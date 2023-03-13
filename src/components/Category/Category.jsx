@@ -1,29 +1,27 @@
 import React from "react";
+import useCategories from "../../hooks/useCategories";
+import Category_box from "../Common/Category_box_mid_size/Category_box";
 import Comming_soon from "../Common/Comming_soon/Comming_soon";
 import Footer from "../Common/Footer/Footer";
 import Header from "../Common/Header/Header";
-import Bigpostcomponents from "../Common/Postcomponents/Bigpost/Bigpostcomponents";
 import Aside_part from "./Aside_part";
 import "./Category.css";
 import Category_hero from "./Category_hero";
 
 const Category = () => {
+  const { categories } = useCategories();
+  console.log(categories);
   return (
     <>
-      {/* <Header />
-      <Category_hero />
+      <Header />
+      {/* <Category_hero /> */}
       <div class="section">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
-              <Bigpostcomponents />
-              <Bigpostcomponents />
-              <Bigpostcomponents />
-              <Bigpostcomponents />
-              <Bigpostcomponents />
-              <Bigpostcomponents />
-              <Bigpostcomponents />
-              <Bigpostcomponents />
+              {categories?.map((item) => {
+                return <Category_box category={item} />;
+              })}
             </div>
             <div class="col-md-4">
               <Aside_part />
@@ -31,8 +29,8 @@ const Category = () => {
           </div>
         </div>
       </div>
-      <Footer /> */}
-      <Comming_soon />
+      <Footer categories={categories} />
+      {/* <Comming_soon /> */}
     </>
   );
 };

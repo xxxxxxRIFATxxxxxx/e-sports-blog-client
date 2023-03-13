@@ -13,8 +13,6 @@ import "./Home.css";
 const Home = () => {
   const { blogs } = useBlogs();
   const { categories } = useCategories();
-  console.log(categories);
-
   return (
     <>
       <Header categories={categories} />

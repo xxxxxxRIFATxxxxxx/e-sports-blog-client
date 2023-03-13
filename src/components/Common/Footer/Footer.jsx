@@ -98,13 +98,13 @@ const Footer = ({ categories }) => {
                 <Link to={`/`}>Home</Link>
               </li>
               <li>
-                <Link to={`/`}>About Us</Link>
+                <Link to={`/about`}>About Us</Link>
               </li>
               <li>
-                <Link to={`/`}>Contacts</Link>
+                <Link to={`/contact`}>Contacts</Link>
               </li>
               <li>
-                <Link to={`/`}>Advertise</Link>
+                <Link to={`/advertise`}>Advertise</Link>
               </li>
               <li>
                 <Link to={`/`}>Privacy</Link>
