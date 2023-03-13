@@ -5,12 +5,10 @@ const Small_top_post = ({ blogs }) => {
   return (
     <>
       <div className="row">
-        {[0, 1, 2].map((item) => {
+        {blogs.map((item) => {
           return (
             <div className="col-md-4">
-              <Smallpostcomponents blog={blogs[item]} />
-              <Smallpostcomponents blog={blogs[item]} />
-              <Smallpostcomponents blog={blogs[item]} />
+              <Smallpostcomponents blog={item} />;
             </div>
           );
         })}

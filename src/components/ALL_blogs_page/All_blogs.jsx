@@ -18,7 +18,7 @@ const All_blogs = () => {
         <div class="container">
           <div class="row">
             <div class="col-md-8">
-              {blogs.slice(0, 10)?.map((item) => {
+              {blogs.slice(0, 3)?.map((item) => {
                 return <Randompostcomponents blog={item} />;
               })}
             </div>
@@ -29,7 +29,6 @@ const All_blogs = () => {
         </div>
       </div>
       <Footer categories={categories} />
-      {/* <Comming_soon /> */}
     </>
   );
 };

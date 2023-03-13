@@ -20,8 +20,8 @@ const Home = () => {
       <Hero_main blogs={blogs.slice(0, 3)} />
       <Div_1_main blogs={blogs.slice(3, 7)} categories={categories} />
       <Wideads />
-      <Div_2_main blogs={blogs.slice(0, 10)} />
-      <DIV_3_main blogs={blogs.slice(0, 10)} />
+      <Div_2_main blogs={blogs.slice(7, 19)} />
+      <DIV_3_main blogs={blogs.slice(20, 22)} />
       <Footer categories={categories} />
     </>
   );

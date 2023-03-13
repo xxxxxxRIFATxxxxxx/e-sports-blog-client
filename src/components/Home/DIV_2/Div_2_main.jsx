@@ -9,7 +9,7 @@ const Div_2_main = ({ blogs }) => {
       <div className="section">
         <div className="container">
           <Top_posts blogs={blogs.slice(0, 3)} />
-          <Small_top_post blogs={blogs} />
+          <Small_top_post blogs={blogs.slice(3, 12)} />
         </div>
       </div>
     </>

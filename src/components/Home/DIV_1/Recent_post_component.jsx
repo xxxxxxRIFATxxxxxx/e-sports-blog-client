@@ -1,15 +1,10 @@
+import { Collapse } from "bootstrap";
 import React from "react";
 import Bigpostcomponents from "../../Common/Postcomponents/Bigpost/Bigpostcomponents";
 import Midpostcomponents from "../../Common/Postcomponents/Midpost/Midpostcomponents";
 import CategoryPostContainer from "./CategoryPostContainer";
 
-const Recent_post_component = ({ blogs }) => {
-  const categories = [
-    "ইংলিশ প্রিমিয়ার লিগ",
-    "লা লিগা",
-    "বাংলাদেশ প্রিমিয়ার লিগ",
-  ];
-
+const Recent_post_component = ({ blogs, categories }) => {
   return (
     <>
       <div className="row">
@@ -28,18 +23,17 @@ const Recent_post_component = ({ blogs }) => {
 
         <Bigpostcomponents blog={blogs[3]} />
       </div>
-      {categories.map((item) => {
+      {categories.slice(0, 3).map((item) => {
         return (
           <div className="row">
             <div className="col-md-12">
               <div className="section-title">
-                <h2 className="title">{item}</h2>
+                <h2 className="title">{item?.title}</h2>
               </div>
             </div>
-
-            <Midpostcomponents blog={blogs[0]} category={item} />
-            <Midpostcomponents blog={blogs[1]} category={item} />
-            <Midpostcomponents blog={blogs[2]} category={item} />
+            {[0, 1, 3].map((i) => {
+              return <Midpostcomponents blog={blogs[i]} category={item} />;
+            })}
           </div>
         );
       })}

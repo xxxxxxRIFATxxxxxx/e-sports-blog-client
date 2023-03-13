@@ -12,7 +12,7 @@ const Div_1_main = ({ blogs, categories }) => {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <Recent_post_component blogs={blogs} />
+              <Recent_post_component blogs={blogs} categories={categories} />
             </div>
             <div className="col-md-4">
               <Ads />
