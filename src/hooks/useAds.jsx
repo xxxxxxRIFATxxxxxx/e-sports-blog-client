@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 
-const useCategories = () => {
-    const [categories, setCategories] = useState([]);
+const useAds = () => {
+    const [ads, setAds] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [successMessage, setSuccessMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const access_token = JSON.parse(localStorage.getItem("access_token"));
 
-    const createCategory = (category) => {
+    const createAds = (ads) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category`, {
+            fetch(`${process.env.REACT_APP_API_URL}/ads`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(category),
+                body: JSON.stringify(ads),
             })
                 .then((res) => res.json())
                 .then((data) => {
@@ -30,15 +30,15 @@ const useCategories = () => {
         return promise;
     };
 
-    const updateCategory = (category) => {
+    const updateAds = (ads) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${category._id}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/ads/${ads._id}`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(category),
+                body: JSON.stringify(ads),
             })
                 .then((res) => res.json())
                 .then((data) => {
@@ -53,9 +53,9 @@ const useCategories = () => {
         return promise;
     };
 
-    const deleteCategory = (id) => {
+    const deleteAds = (id) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${id}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/ads/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
@@ -74,9 +74,9 @@ const useCategories = () => {
         return promise;
     };
 
-    const getCategory = (id) => {
+    const getAds = (id) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${id}`)
+            fetch(`${process.env.REACT_APP_API_URL}/ads/${id}`)
                 .then((res) => res.json())
                 .then((data) => {
                     const result = data.result;
@@ -93,30 +93,30 @@ const useCategories = () => {
     useEffect(() => {
         setIsLoading(true);
 
-        fetch(`${process.env.REACT_APP_API_URL}/category`)
+        fetch(`${process.env.REACT_APP_API_URL}/ads`)
             .then((res) => res.json())
             .then((data) => {
                 const result = data.result;
-                setCategories(result);
+                setAds(result);
                 setIsLoading(false);
-                setSuccessMessage("Category Fetched Successfully!");
+                setSuccessMessage("Ads Fetched Successfully!");
             })
             .catch((error) => {
                 setErrorMessage(error);
                 setIsLoading(false);
             });
-    }, [categories]);
+    }, [ads]);
 
     return {
-        categories,
+        ads,
         isLoading,
         successMessage,
         errorMessage,
-        createCategory,
-        updateCategory,
-        deleteCategory,
-        getCategory,
+        createAds,
+        updateAds,
+        deleteAds,
+        getAds,
     };
 };
 
-export default useCategories;
+export default useAds;

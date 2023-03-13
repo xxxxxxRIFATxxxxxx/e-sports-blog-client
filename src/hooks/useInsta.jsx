@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 
-const useCategories = () => {
-    const [categories, setCategories] = useState([]);
+const useInsta = () => {
+    const [insta, setInsta] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [successMessage, setSuccessMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const access_token = JSON.parse(localStorage.getItem("access_token"));
 
-    const createCategory = (category) => {
+    const createInsta = (insta) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category`, {
+            fetch(`${process.env.REACT_APP_API_URL}/insta`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(category),
+                body: JSON.stringify(insta),
             })
                 .then((res) => res.json())
                 .then((data) => {
@@ -30,15 +30,15 @@ const useCategories = () => {
         return promise;
     };
 
-    const updateCategory = (category) => {
+    const updateInsta = (insta) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${category._id}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/insta/${insta._id}`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(category),
+                body: JSON.stringify(insta),
             })
                 .then((res) => res.json())
                 .then((data) => {
@@ -53,9 +53,9 @@ const useCategories = () => {
         return promise;
     };
 
-    const deleteCategory = (id) => {
+    const deleteInsta = (id) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${id}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/insta/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
@@ -74,9 +74,9 @@ const useCategories = () => {
         return promise;
     };
 
-    const getCategory = (id) => {
+    const getInsta = (id) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${id}`)
+            fetch(`${process.env.REACT_APP_API_URL}/insta/${id}`)
                 .then((res) => res.json())
                 .then((data) => {
                     const result = data.result;
@@ -93,30 +93,30 @@ const useCategories = () => {
     useEffect(() => {
         setIsLoading(true);
 
-        fetch(`${process.env.REACT_APP_API_URL}/category`)
+        fetch(`${process.env.REACT_APP_API_URL}/insta`)
             .then((res) => res.json())
             .then((data) => {
                 const result = data.result;
-                setCategories(result);
+                setInsta(result);
                 setIsLoading(false);
-                setSuccessMessage("Category Fetched Successfully!");
+                setSuccessMessage("Insta Fetched Successfully!");
             })
             .catch((error) => {
                 setErrorMessage(error);
                 setIsLoading(false);
             });
-    }, [categories]);
+    }, [insta]);
 
     return {
-        categories,
+        insta,
         isLoading,
         successMessage,
         errorMessage,
-        createCategory,
-        updateCategory,
-        deleteCategory,
-        getCategory,
+        createInsta,
+        updateInsta,
+        deleteInsta,
+        getInsta,
     };
 };
 
-export default useCategories;
+export default useInsta;

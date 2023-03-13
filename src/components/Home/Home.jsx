@@ -11,20 +11,17 @@ import Hero_main from "./DIV_Hero/Hero_main";
 import "./Home.css";
 
 const Home = () => {
-  const { blogs } = useBlogs();
-  const { categories } = useCategories();
-  return (
-    <>
-      <Header categories={categories} />
-
-      <Hero_main blogs={blogs.slice(0, 3)} />
-      <Div_1_main blogs={blogs.slice(3, 7)} categories={categories} />
-      <Wideads />
-      <Div_2_main blogs={blogs.slice(7, 19)} />
-      <DIV_3_main blogs={blogs.slice(20, 22)} />
-      <Footer categories={categories} />
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <Hero_main />
+            <Div_1_main />
+            <Wideads />
+            <Div_2_main />
+            <DIV_3_main />
+            <Footer />
+        </>
+    );
 };
 
 export default Home;

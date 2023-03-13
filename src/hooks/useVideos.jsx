@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 
-const useCategories = () => {
-    const [categories, setCategories] = useState([]);
+const useVideos = () => {
+    const [videos, setVideos] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [successMessage, setSuccessMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const access_token = JSON.parse(localStorage.getItem("access_token"));
 
-    const createCategory = (category) => {
+    const createVideo = (video) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category`, {
+            fetch(`${process.env.REACT_APP_API_URL}/videos`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(category),
+                body: JSON.stringify(video),
             })
                 .then((res) => res.json())
                 .then((data) => {
@@ -30,15 +30,15 @@ const useCategories = () => {
         return promise;
     };
 
-    const updateCategory = (category) => {
+    const updateVideo = (video) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${category._id}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/videos/${video._id}`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(category),
+                body: JSON.stringify(video),
             })
                 .then((res) => res.json())
                 .then((data) => {
@@ -53,9 +53,9 @@ const useCategories = () => {
         return promise;
     };
 
-    const deleteCategory = (id) => {
+    const deleteVideo = (id) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${id}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/videos/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${access_token}`,
@@ -74,9 +74,9 @@ const useCategories = () => {
         return promise;
     };
 
-    const getCategory = (id) => {
+    const getVideo = (id) => {
         const promise = new Promise((resolve, reject) => {
-            fetch(`${process.env.REACT_APP_API_URL}/category/${id}`)
+            fetch(`${process.env.REACT_APP_API_URL}/videos/${id}`)
                 .then((res) => res.json())
                 .then((data) => {
                     const result = data.result;
@@ -93,30 +93,30 @@ const useCategories = () => {
     useEffect(() => {
         setIsLoading(true);
 
-        fetch(`${process.env.REACT_APP_API_URL}/category`)
+        fetch(`${process.env.REACT_APP_API_URL}/videos`)
             .then((res) => res.json())
             .then((data) => {
                 const result = data.result;
-                setCategories(result);
+                setVideos(result);
                 setIsLoading(false);
-                setSuccessMessage("Category Fetched Successfully!");
+                setSuccessMessage("Videos Fetched Successfully!");
             })
             .catch((error) => {
                 setErrorMessage(error);
                 setIsLoading(false);
             });
-    }, [categories]);
+    }, [videos]);
 
     return {
-        categories,
+        videos,
         isLoading,
         successMessage,
         errorMessage,
-        createCategory,
-        updateCategory,
-        deleteCategory,
-        getCategory,
+        createVideo,
+        updateVideo,
+        deleteVideo,
+        getVideo,
     };
 };
 
-export default useCategories;
+export default useVideos;
