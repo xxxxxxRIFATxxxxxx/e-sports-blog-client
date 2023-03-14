@@ -6,7 +6,6 @@ import Footer from "../Common/Footer/Footer";
 import Header from "../Common/Header/Header";
 import Aside_part from "./Aside_part";
 import "./Category.css";
-import Category_hero from "./Category_hero";
 
 const Category = () => {
   const { categories } = useCategories();
