@@ -6,21 +6,26 @@ const Bodypart = ({ blog }) => {
     <div>
       <div class="section-row">
         <div class="post-share">
-          <Link to={`/`} class="social-facebook">
+          <Link
+            to={`https://www.facebook.com/dribble.digest/`}
+            class="social-facebook"
+          >
             <i class="fa fa-facebook"></i>
             <span>Share</span>
           </Link>
-          <Link to={`/`} class="social-twitter">
-            <i class="fa fa-twitter"></i>
-            <span>Tweet</span>
+          <Link
+            to={`https://www.instagram.com/dribbledigest/`}
+            class="social-instagram"
+          >
+            <i class="fa fa-instagram"></i>
+            <span>Share</span>
           </Link>
-          <Link to={`/`} class="social-pinterest">
-            <i class="fa fa-pinterest"></i>
-            <span>Pin</span>
-          </Link>
-          <Link to={`/`}>
-            <i class="fa fa-envelope"></i>
-            <span>Email</span>
+          <Link
+            to={`https://www.youtube.com/@dribbledigest`}
+            class="social-google-plus"
+          >
+            <i class="fa fa-youtube-play"></i>
+            <span>Share</span>
           </Link>
         </div>
       </div>
@@ -32,16 +37,16 @@ const Bodypart = ({ blog }) => {
           <ul>
             <li>TAGS:</li>
             <li>
-              <Link to={`/`}>Social</Link>
+              <Link to={``}>Social</Link>
             </li>
             <li>
-              <Link to={`/`}>Lifestyle</Link>
+              <Link to={``}>Lifestyle</Link>
             </li>
             <li>
-              <Link to={`/`}>Fashion</Link>
+              <Link to={``}>Fashion</Link>
             </li>
             <li>
-              <Link to={`/`}>Health</Link>
+              <Link to={``}>Health</Link>
             </li>
           </ul>
         </div>
@@ -50,12 +55,12 @@ const Bodypart = ({ blog }) => {
       <div class="section-row">
         <div class="section-title">
           <h3 class="title">
-            About <Link to={`/`}>সাদনিমা আমিন</Link>
+            About <Link>সাদনিমা আমিন</Link>
           </h3>
         </div>
         <div class="author media">
           <div class="media-left">
-            <Link to={`/`}>
+            <Link to={``}>
               <img class="author-img media-object" src="" alt="" />
             </Link>
           </div>
@@ -67,28 +72,28 @@ const Bodypart = ({ blog }) => {
               এবং আমিতাভ বচ্চন রয়েছে। আমার উপর প্রতিযোগিতামূলক প্রয়াসের ফলে
               আমি এখন বলিউডের একটি জনপ্রিয় নাম।
             </p>
-            <ul class="author-social">
+            {/* <ul class="author-social">
               <li>
-                <Link to={`/`}>
+                <Link to={`https://www.facebook.com/dribble.digest/`}>
                   <i class="fa fa-facebook"></i>
                 </Link>
               </li>
               <li>
-                <Link to={`/`}>
+                <Link to={``}>
                   <i class="fa fa-twitter"></i>
                 </Link>
               </li>
               <li>
-                <Link to={`/`}>
-                  <i class="fa fa-google-plus"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to={`/`}>
+                <Link to={`https://www.instagram.com/dribbledigest/`}>
                   <i class="fa fa-instagram"></i>
                 </Link>
               </li>
-            </ul>
+              <li>
+                <Link to={`https://www.youtube.com/@dribbledigest `}>
+                  <i class="fa fa-youtube-play"></i>
+                </Link>
+              </li>
+            </ul> */}
           </div>
         </div>
       </div>

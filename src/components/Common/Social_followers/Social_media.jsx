@@ -11,32 +11,44 @@ const Social_media = () => {
       <div className="social-widget">
         <ul>
           <li>
-            <Link to={`/`} className="social-facebook">
+            <Link
+              to={`https://www.facebook.com/dribble.digest/`}
+              className="social-facebook"
+              target="_blank"
+            >
               <i className="fa fa-facebook"></i>
               <span>
-                21.2K
+                3K
                 <br />
                 Followers
               </span>
             </Link>
           </li>
           <li>
-            <Link to={`/`} className="social-twitter">
-              <i className="fa fa-twitter"></i>
+            <Link
+              to={`https://www.instagram.com/dribbledigest/`}
+              className="social-instagram"
+              target="_blank"
+            >
+              <i className="fa fa-instagram"></i>
               <span>
-                10.2K
+                2K
                 <br />
                 Followers
               </span>
             </Link>
           </li>
           <li>
-            <Link to={`/`} className="social-google-plus">
-              <i className="fa fa-google-plus"></i>
+            <Link
+              to={`https://www.youtube.com/@dribbledigest`}
+              className="social-google-plus"
+              target="_blank"
+            >
+              <i className="fa fa-youtube-play"></i>
               <span>
                 5K
                 <br />
-                Followers
+                Subcribers
               </span>
             </Link>
           </li>

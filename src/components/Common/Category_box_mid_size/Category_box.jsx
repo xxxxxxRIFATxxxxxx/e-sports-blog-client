@@ -16,22 +16,9 @@ const Category_box = ({ category }) => {
         <div className="post-body">
           <div className="post-category">
             <Link to={`/allblogs?category=${category?.title}`}>
-              {category?.title}
+              <h1 className="text_decor">{category?.title}</h1>
             </Link>
           </div>
-          <h3 className="post-title title-sm">
-            <Link to={`/allblogs?category=${category?.title}`}>
-              {category?.title}
-            </Link>
-          </h3>
-          <ul className="post-meta">
-            <li>
-              <Link to={`/allblogs?category=${category?.title}`}>
-                {category?.title}
-              </Link>
-            </li>
-            <li>{category?.createdAt}</li>
-          </ul>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import Footer from "../Common/Footer/Footer";
 import Header from "../Common/Header/Header";
 import Randompostcomponents from "../Common/Postcomponents/Randompost/Randompostcomponents";
 import { useSearchParams } from "react-router-dom";
+import Preloader_component from "../Common/Preloader_icon/Preloader_component";
 
 const All_blogs = () => {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -25,7 +26,7 @@ const All_blogs = () => {
         setBlogs(result);
       });
     } else {
-      getLimitedBlogs(3).then((result) => {
+      getLimitedBlogs(22).then((result) => {
         setBlogs(result);
       });
     }
@@ -39,6 +40,7 @@ const All_blogs = () => {
         <div class="container">
           <div class="row">
             <div class="col-md-8">
+              {blogs.length === 0 && <Preloader_component />}
               {blogs?.map((item) => {
                 return <Randompostcomponents blog={item} />;
               })}

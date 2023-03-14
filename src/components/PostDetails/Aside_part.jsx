@@ -10,7 +10,7 @@ import Social_media from "../Common/Social_followers/Social_media";
 const Aside_part = ({ categories }) => {
   return (
     <>
-      <Ads />
+      {/* <Ads /> */}
       <Social_media />
       <Categories_component categories={categories} />
       {/* <Newsletter_component /> */}

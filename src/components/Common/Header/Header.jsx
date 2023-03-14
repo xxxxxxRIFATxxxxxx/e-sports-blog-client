@@ -23,12 +23,12 @@ const Header = () => {
                     </Link>
                   </li>
                   {/* <li>
-                                        <Link to={`/`}>
+                                        <Link to={``}>
                                             <i className="fa fa-twitter"></i>
                                         </Link>
                                     </li> */}
                   {/* <li>
-                                        <Link to={`/`}>
+                                        <Link to={``}>
                                             <i className="fa fa-google-plus"></i>
                                         </Link>
                                     </li> */}

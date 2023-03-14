@@ -4,12 +4,13 @@ import Category_box from "../Common/Category_box_mid_size/Category_box";
 import Comming_soon from "../Common/Comming_soon/Comming_soon";
 import Footer from "../Common/Footer/Footer";
 import Header from "../Common/Header/Header";
+import Preloader_component from "../Common/Preloader_icon/Preloader_component";
 import Aside_part from "./Aside_part";
 import "./Category.css";
 
 const Category = () => {
   const { categories } = useCategories();
-  console.log(categories);
+  // console.log(categories);
   return (
     <>
       <Header />
@@ -18,6 +19,7 @@ const Category = () => {
         <div class="container">
           <div class="row">
             <div class="col-md-8">
+              {categories.length === 0 && <Preloader_component />}
               {categories?.map((item) => {
                 return <Category_box category={item} />;
               })}

@@ -16,7 +16,7 @@ const Category_hero = () => {
         <div class="row">
           <div class="col-md-10">
             <div class="post-category">
-              <Link to={`/`}>Lifestyle</Link>
+              <Link to={``}>Lifestyle</Link>
             </div>
             <h1>
               Mel ut impetus suscipit tincidunt. Cum id ullum laboramus
@@ -24,7 +24,7 @@ const Category_hero = () => {
             </h1>
             <ul class="post-meta">
               <li>
-                <Link to={`/`}>John Doe</Link>
+                <Link to={``}>John Doe</Link>
               </li>
               <li>20 April 2018</li>
               <li>

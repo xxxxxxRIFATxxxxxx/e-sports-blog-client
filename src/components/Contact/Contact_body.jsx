@@ -20,7 +20,7 @@ const Contact_body = () => {
           </li>
           <li>
             <i className="fa fa-envelope"></i>{" "}
-            <Link to={`/`}>
+            <Link to={``}>
               <span
                 className="__cf_email__"
                 data-cfemail="82e1e3eeeeebe7c2e7efe3ebeeace1edef"

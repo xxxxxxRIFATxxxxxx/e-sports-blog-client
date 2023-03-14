@@ -11,36 +11,18 @@ const Instaapi_component = () => {
       </div>
       <div className="galery-widget">
         <ul>
-          <li>
-            <Link to={`/`}>
-              <img src={insta_photo} className="insta_post_pading" alt="" />
-            </Link>
-          </li>
-          <li>
-            <Link to={`/`}>
-              <img src={insta_photo} className="insta_post_pading" alt="" />
-            </Link>
-          </li>
-          <li>
-            <Link to={`/`}>
-              <img src={insta_photo} className="insta_post_pading" alt="" />
-            </Link>
-          </li>
-          <li>
-            <Link to={`/`}>
-              <img src={insta_photo} className="insta_post_pading" alt="" />
-            </Link>
-          </li>
-          <li>
-            <Link to={`/`}>
-              <img src={insta_photo} className="insta_post_pading" alt="" />
-            </Link>
-          </li>
-          <li>
-            <Link to={`/`}>
-              <img src={insta_photo} className="insta_post_pading" alt="" />
-            </Link>
-          </li>
+          {[0, 1, 2, 3, 4, 5].map((item) => {
+            return (
+              <li>
+                <Link
+                  to={`https://www.instagram.com/dribbledigest/`}
+                  target="_blank"
+                >
+                  <img src={insta_photo} className="insta_post_pading" alt="" />
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import logo_main from "../../../images/logo/Dribble-Digest.png";
+import logo_main from "../../../images/logo/Dribble-Digest-white.png";
 import useCategories from "../../../hooks/useCategories";
 import Newsletter_component from "../Newsletter/Newsletter_component";
 import Instaapi_component from "../Instaapi/Instaapi_component";
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="col-md-4">
             <div className="footer-widget">
               <div className="footer-logo image_align">
-                <Link to={`/`} className="logo">
+                <Link to={``} className="logo">
                   <img src={logo_main} className="size_logo" alt="" />
                 </Link>
               </div>
@@ -34,12 +34,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 {/* <li>
-                  <Link to={`/`} className="social-twitter">
+                  <Link to={``} className="social-twitter">
                     <i className="fa fa-twitter"></i>
                   </Link>
                 </li> */}
                 {/* <li>
-                  <Link to={`/`} className="social-google-plus">
+                  <Link to={``} className="social-google-plus">
                     <i className="fa fa-google-plus"></i>
                   </Link>
                 </li> */}
@@ -72,7 +72,9 @@ const Footer = () => {
                   {categories?.map((item) => {
                     return (
                       <li>
-                        <Link to={`/`}>{item?.title}</Link>
+                        <Link to={`/allblogs?category=${item?.title}`}>
+                          {item?.title}
+                        </Link>
                       </li>
                     );
                   })}
@@ -85,9 +87,13 @@ const Footer = () => {
               <h3 className="footer-title">Tags</h3>
               <div className="tags-widget">
                 <ul>
-                  <li>
-                    <Link to={`/`}>Social</Link>
-                  </li>
+                  {[1, 2, 3].map((item) => {
+                    return (
+                      <li>
+                        <Link to={``}>#Social{item}</Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -113,14 +119,14 @@ const Footer = () => {
                 <Link to={`/advertise`}>Advertise</Link>
               </li>
               {/* <li>
-                                <Link to={`/`}>Privacy</Link>
+                                <Link to={``}>Privacy</Link>
                             </li> */}
             </ul>
           </div>
           <div className="col-md-6 col-md-pull-6">
             <div className="footer-copyright">
               <script>document.write(new Date().getFullYear());</script> All
-              rights reserved | by <Link to={`/`}></Link>
+              rights reserved | by Awsdyn <Link to={``}></Link>
             </div>
           </div>
         </div>

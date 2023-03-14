@@ -9,7 +9,7 @@ const Wideads = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 section-row text-center">
-            <Link to={`/`} style={{ display: "inline-block", margin: "auto" }}>
+            <Link to={``} style={{ display: "inline-block", margin: "auto" }}>
               <img className="img-responsive" src={ads_big} alt="" />
             </Link>
           </div>

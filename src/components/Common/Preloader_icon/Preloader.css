@@ -1,0 +1,21 @@
+.preloader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+}
+
+.preloader {
+  width: 30px;
+  height: 30px;
+  border-radius: 46%;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #ff7b00;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

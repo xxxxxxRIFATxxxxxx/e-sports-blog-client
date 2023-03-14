@@ -24,7 +24,9 @@ const Top_big_post_component = ({ blog }) => {
           </h3>
           <ul className="post-meta">
             <li>
-              <Link to={`/`}>{blog?.author}</Link>
+              <Link to={`/PostDetails?blogId=${blog?._id}`}>
+                {blog?.author}
+              </Link>
             </li>
             <li>{blog?.createdAt}</li>
           </ul>

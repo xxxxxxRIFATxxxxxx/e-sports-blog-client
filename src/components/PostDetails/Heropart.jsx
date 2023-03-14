@@ -20,17 +20,17 @@ const Heropart = ({ blog }) => {
           <div class="row">
             <div class="col-md-10">
               <div class="post-category">
-                <Link to={`/`}>Lifestyle</Link>
+                <Link to={``}>{blog?.category}</Link>
               </div>
               <h1>{blog?.title}</h1>
               <ul class="post-meta">
                 <li>
-                  <Link to={`/`}>{blog?.author}</Link>
+                  <Link to={``}>{blog?.author}</Link>
                 </li>
                 <li>{blog?.createdAt}</li>
-                <li>
+                {/* <li>
                   <i class="fa fa-eye"></i> 807
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

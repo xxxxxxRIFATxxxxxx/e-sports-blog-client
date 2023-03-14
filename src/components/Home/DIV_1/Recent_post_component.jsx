@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useBlogs from "../../../hooks/useBlogs";
 import useCategories from "../../../hooks/useCategories";
 import Bigpostcomponents from "../../Common/Postcomponents/Bigpost/Bigpostcomponents";
+import Preloader_component from "../../Common/Preloader_icon/Preloader_component";
 import MidPostContainer from "./MidPostContainer";
 
 const Recent_post_component = () => {
@@ -22,7 +23,7 @@ const Recent_post_component = () => {
   return (
     <>
       {blogs.length === 0 ? (
-        "Loading..."
+        <Preloader_component />
       ) : (
         <div className="row">
           <div className="col-md-12">

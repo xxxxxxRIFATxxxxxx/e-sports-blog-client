@@ -11,13 +11,13 @@ const Div_1_main = () => {
       <div className="section">
         <div className="container">
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-md-12">
               <Recent_post_component />
             </div>
-            <div className="col-md-4">
+            {/* <div className="col-md-4">
               <Ads />
-              {/* <Newsletter_component /> */}
-            </div>
+              <Newsletter_component />
+            </div> */}
           </div>
         </div>
       </div>

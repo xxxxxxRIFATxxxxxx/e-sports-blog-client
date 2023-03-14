@@ -1,0 +1,9 @@
+.text_decor {
+  color: rgb(0, 0, 0);
+  font-size: medium;
+}
+
+.text_decor:hover {
+  color: rgb(253, 128, 44);
+  text-decoration: none;
+}

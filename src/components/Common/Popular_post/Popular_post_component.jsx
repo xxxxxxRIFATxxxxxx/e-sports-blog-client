@@ -15,10 +15,10 @@ const Popular_post_component = () => {
         </Link>
         <div className="post-body">
           <div className="post-category">
-            <Link to={`/`}>Lifestyle</Link>
+            <Link to={``}>Lifestyle</Link>
           </div>
           <h3 className="post-title">
-            <Link to={`/`}>
+            <Link to={``}>
               Ne bonorum praesent cum, labitur persequeris definitionem quo cu?
             </Link>
           </h3>
@@ -31,11 +31,11 @@ const Popular_post_component = () => {
         </Link>
         <div className="post-body">
           <div className="post-category">
-            <Link to={`/`}>Technology</Link>
-            <Link to={`/`}>Lifestyle</Link>
+            <Link to={``}>Technology</Link>
+            <Link to={``}>Lifestyle</Link>
           </div>
           <h3 className="post-title">
-            <Link to={`/`}>
+            <Link to={``}>
               Mel ut impetus suscipit tincidunt. Cum id ullum laboramus
               persequeris.
             </Link>
@@ -49,10 +49,10 @@ const Popular_post_component = () => {
         </Link>
         <div className="post-body">
           <div className="post-category">
-            <Link to={`/`}>Health</Link>
+            <Link to={``}>Health</Link>
           </div>
           <h3 className="post-title">
-            <Link to={`/`}>
+            <Link to={``}>
               Postea senserit id eos, vivendo periculis ei qui
             </Link>
           </h3>
@@ -65,11 +65,11 @@ const Popular_post_component = () => {
         </Link>
         <div className="post-body">
           <div className="post-category">
-            <Link to={`/`}>Health</Link>
-            <Link to={`/`}>Lifestyle</Link>
+            <Link to={``}>Health</Link>
+            <Link to={``}>Lifestyle</Link>
           </div>
           <h3 className="post-title">
-            <Link to={`/`}>
+            <Link to={``}>
               Sed ut perspiciatis, unde omnis iste natus error sit
             </Link>
           </h3>
