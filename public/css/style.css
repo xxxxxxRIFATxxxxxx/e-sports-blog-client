@@ -277,22 +277,27 @@ textarea.input {
 
 .social-facebook {
   background: #225b99 !important;
+  margin-right: 10px;
 }
 
 .social-twitter {
   background: #00adf2 !important;
+  margin-right: 10px;
 }
 
 .social-google-plus {
   background: #dc4d2d !important;
+  margin-right: 10px;
 }
 
 .social-pinterest {
   background: #cc2127 !important;
+  margin-right: 10px;
 }
 
 .social-instagram {
   background: #d341b2 !important;
+  margin-right: 10px;
 }
 
 /*=========================================================

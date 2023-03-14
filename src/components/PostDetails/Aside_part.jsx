@@ -13,9 +13,9 @@ const Aside_part = ({ categories }) => {
       <Ads />
       <Social_media />
       <Categories_component categories={categories} />
-      <Newsletter_component />
+      {/* <Newsletter_component /> */}
       {/* <Popular_post_component /> */}
-      {/* <Instaapi_component /> */}
+      <Instaapi_component />
       {/* <ADS_BOTTOM /> */}
     </>
   );

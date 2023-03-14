@@ -16,7 +16,7 @@ const Div_1_main = () => {
             </div>
             <div className="col-md-4">
               <Ads />
-              <Newsletter_component />
+              {/* <Newsletter_component /> */}
             </div>
           </div>
         </div>
