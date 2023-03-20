@@ -52,7 +52,9 @@ const Header = () => {
               </div>
 
               <div className="">
-                <img src={logo_main} className="logo_size" />
+                <Link to={`/`}>
+                  <img src={logo_main} className="logo_size" />
+                </Link>
               </div>
 
               <div className="">
@@ -85,10 +87,10 @@ const Header = () => {
           <div className="container">
             <ul className="nav-menu">
               <li className="">
-                <Link to={`/`}>হোম</Link>
+                <Link to={`/`}>Home</Link>
               </li>
               <li className="has-dropdown ">
-                <Link to={`/category`}>ফুটবল লীগস</Link>
+                <Link to={`/category`}>Football leagues</Link>
                 <div className="dropdown">
                   <div className="dropdown-body">
                     <ul className="dropdown-list">
@@ -106,13 +108,13 @@ const Header = () => {
                 </div>
               </li>
               <li>
-                <Link to={`/fixtures`}>ফিক্সচারস</Link>
+                <Link to={`/fixtures`}>Fixtures</Link>
               </li>
               <li>
-                <Link to={`/allblogs`}>ব্লগস</Link>
+                <Link to={`/allblogs`}>BLOGS</Link>
               </li>
               <li>
-                <Link to={`/videos`}>ভিডিও</Link>
+                <Link to={`/videos`}>VIDEOS</Link>
               </li>
             </ul>
           </div>
@@ -121,10 +123,10 @@ const Header = () => {
         <div id="nav-aside">
           <ul className="nav-aside-menu">
             <li>
-              <Link to={`/`}>হোম</Link>
+              <Link to={`/`}>Home</Link>
             </li>
             <li className="has-dropdown">
-              <Link to={`/category`}>ক্যাটেগরীজ</Link>
+              <Link to={`/category`}>Football leagues</Link>
               <ul className="dropdown">
                 {categories?.map((item) => {
                   return (
@@ -138,13 +140,13 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <Link to={`/about`}>এবাউট আস</Link>
+              <Link to={`/about`}>About Us</Link>
             </li>
             <li>
-              <Link to={`/contact`}>কন্টাক্টস</Link>
+              <Link to={`/contact`}>Contacts</Link>
             </li>
             <li>
-              <Link to={`/advertise`}>এডভারটাইয়স</Link>
+              <Link to={`/advertise`}>Advertise</Link>
             </li>
           </ul>
           <button className="nav-close nav-aside-close">
