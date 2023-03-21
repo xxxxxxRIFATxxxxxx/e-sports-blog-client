@@ -19,11 +19,11 @@ const Midpostcomponents = ({ blog }) => {
             <Link to={`/PostDetails?blogId=${blog?._id}`}>{blog?.title}</Link>
           </h3>
           <ul className="post-meta">
-            <li>
+            {/* <li>
               <Link to={`/PostDetails?blogId=${blog?._id}`}>
                 {blog?.author}
               </Link>
-            </li>
+            </li> */}
             <li>{blog?.createdAt}</li>
           </ul>
         </div>

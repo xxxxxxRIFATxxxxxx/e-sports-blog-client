@@ -14,6 +14,7 @@ const Home = () => {
   return (
     <>
       <Header />
+      <div></div>
       <Hero_main />
       <Div_1_main />
       {/* <Wideads /> */}

@@ -10,22 +10,29 @@ import Footer from "../Common/Footer/Footer";
 import { useSearchParams } from "react-router-dom";
 import useBlogs from "../../hooks/useBlogs";
 import useCategories from "../../hooks/useCategories";
+import useAuth from "../../hooks/useAuth";
 
 const PostDetails = () => {
   const [blog_id] = useSearchParams();
   const [blog, setBlog] = useState({});
+  const [user, setUser] = useState({});
   const blogId = blog_id.get("blogId");
   const { categories } = useCategories();
+  const { getUser } = useAuth();
 
   const { getBlog } = useBlogs();
 
   useEffect(
     () => {
-      getBlog(blogId).then((data) => setBlog(data));
+      getBlog(blogId).then((data) => {
+        setBlog(data);
+        getUser(blog.author).then((userData) => {
+          setUser(userData);
+        });
+      });
     },
-    { blog }
+    { blog, user }
   );
-
   return (
     <>
       <Header />
@@ -34,7 +41,7 @@ const PostDetails = () => {
         <div class="container">
           <div class="row">
             <div class="col-md-8">
-              <Bodypart blog={blog} />
+              <Bodypart blog={blog} user={user} />
               <div>
                 <div class="section-title">
                   <h3 class="title">Related Posts</h3>

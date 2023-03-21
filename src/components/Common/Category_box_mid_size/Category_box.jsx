@@ -9,7 +9,7 @@ const Category_box = ({ category }) => {
       <div className="post post-sm">
         <Link className="post-img" to={`/allblogs?category=${category?.title}`}>
           <img
-            src="https://www.reuters.com/resizer/NQDAAV4F_rXWwOthTmfdCMGnKqM=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/XVOLPTTQ7NLIHEDUTBC24JEXJM.jpg"
+            src="https://resources.premierleague.com/premierleague/photo/2022/08/30/7e862b44-1844-47ac-87ad-c05e6e063851/1415983298.jpg"
             alt=""
           />
         </Link>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Bodypart = ({ blog }) => {
+const Bodypart = ({ blog, user }) => {
   return (
     <div>
       <div class="section-row">
@@ -55,45 +55,17 @@ const Bodypart = ({ blog }) => {
       <div class="section-row">
         <div class="section-title">
           <h3 class="title">
-            About <Link>সাদনিমা আমিন</Link>
+            About <Link>{user?.firstName}</Link>
           </h3>
         </div>
         <div class="author media">
           <div class="media-left">
             <Link to={``}>
-              <img class="author-img media-object" src="" alt="" />
+              <img class="author-img media-object" src={user?.image} alt="" />
             </Link>
           </div>
           <div class="media-body">
-            <p>
-              আমার জন্ম ভারতের মুম্বই শহরে হয়েছে এবং আমি একটি সফল মডেল হিসাবে
-              জানা হয়। আমি বলিউডে একটি প্রতিষ্ঠিত নাম হিসেবে উল্লেখযোগ্য হয়েছি
-              এবং আমার কাছে পরিচিত সুপারস্টারদের মধ্যে শাহরুখ খান, সালমান খান
-              এবং আমিতাভ বচ্চন রয়েছে। আমার উপর প্রতিযোগিতামূলক প্রয়াসের ফলে
-              আমি এখন বলিউডের একটি জনপ্রিয় নাম।
-            </p>
-            {/* <ul class="author-social">
-              <li>
-                <Link to={`https://www.facebook.com/dribble.digest/`}>
-                  <i class="fa fa-facebook"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to={``}>
-                  <i class="fa fa-twitter"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to={`https://www.instagram.com/dribbledigest/`}>
-                  <i class="fa fa-instagram"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to={`https://www.youtube.com/@dribbledigest `}>
-                  <i class="fa fa-youtube-play"></i>
-                </Link>
-              </li>
-            </ul> */}
+            <p>{user?.bio}</p>
           </div>
         </div>
       </div>

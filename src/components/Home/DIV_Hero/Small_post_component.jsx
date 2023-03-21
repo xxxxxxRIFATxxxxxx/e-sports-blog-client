@@ -5,14 +5,14 @@ const Small_post_component = ({ blog }) => {
   return (
     <div className="post post-thumb">
       <div className="overlay_image">
-        <div className="overlay_image_content">
+        <div className="overlay_image_content" style={{ height: "250px" }}>
           <Link className="post-img" to={`/PostDetails?blogId=${blog?._id}`}>
             <img src={blog?.thumbnail} alt="" />
           </Link>
         </div>
       </div>
       <Link className="post-img" to={`/PostDetails?blogId=${blog?._id}`}>
-        <img src={blog?.thumbnail} alt="" />
+        <img src={blog?.thumbnail} alt="" style={{ height: "250px" }} />
       </Link>
       <div className="post-body">
         <div className="post-category">
@@ -22,9 +22,9 @@ const Small_post_component = ({ blog }) => {
           <Link to={``}>{blog?.title}</Link>
         </h3>
         <ul className="post-meta">
-          <li>
+          {/* <li>
             <Link to={``}>{blog?.author}</Link>
-          </li>
+          </li> */}
           <li>{blog?.createdAt}</li>
         </ul>
       </div>
