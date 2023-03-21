@@ -3,6 +3,7 @@ import useBlogs from "../../hooks/useBlogs";
 import useCategories from "../../hooks/useCategories";
 import Wideads from "../Common/Ads/Wideads";
 import Footer from "../Common/Footer/Footer";
+import Football_kick from "../Common/games/football_kick/Football_kick";
 import Header from "../Common/Header/Header";
 import Div_1_main from "./DIV_1/Div_1_main";
 import Div_2_main from "./DIV_2/Div_2_main";
@@ -14,7 +15,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div></div>
+      <Football_kick />
       <Hero_main />
       <Div_1_main />
       {/* <Wideads /> */}

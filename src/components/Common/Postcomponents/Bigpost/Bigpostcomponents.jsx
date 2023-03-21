@@ -22,7 +22,7 @@ const Bigpostcomponents = ({ blog }) => {
           <ul className="post-meta">
             <li>
               <Link to={`/PostDetails?blogId=${blog?._id}`}>
-                {blog?.author}
+                {/* {blog?.author} */}
               </Link>
             </li>
             <li>{blog?.createdAt}</li>
