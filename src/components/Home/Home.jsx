@@ -22,6 +22,9 @@ const Home = () => {
       <Div_2_main />
       <DIV_3_main />
       <Footer />
+
+      {/* IMAGE SIZE FIX - AUTHOR DATA FIX - INSTAPI DAYNAMIC
+       */}
     </>
   );
 };
