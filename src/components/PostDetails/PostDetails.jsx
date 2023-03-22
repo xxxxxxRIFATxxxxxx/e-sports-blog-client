@@ -13,56 +13,56 @@ import useCategories from "../../hooks/useCategories";
 import useAuth from "../../hooks/useAuth";
 
 const PostDetails = () => {
-  const [blog_id] = useSearchParams();
-  const [blog, setBlog] = useState({});
-  const [user, setUser] = useState({});
-  const blogId = blog_id.get("blogId");
-  const { categories } = useCategories();
-  const { getUser } = useAuth();
+    const [blog_id] = useSearchParams();
+    const [blog, setBlog] = useState({});
+    const [user, setUser] = useState({});
+    const blogId = blog_id.get("blogId");
+    const { categories } = useCategories();
+    const { getUser } = useAuth();
 
-  const { getBlog } = useBlogs();
+    const { getBlog } = useBlogs();
 
-  useEffect(
-    () => {
-      getBlog(blogId).then((data) => {
-        setBlog(data);
-        getUser(blog.author).then((userData) => {
-          setUser(userData);
-        });
-      });
-    },
-    { blog, user }
-  );
-  return (
-    <>
-      <Header />
-      <Heropart blog={blog} />
-      <div class="section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <Bodypart blog={blog} user={user} />
-              <div>
-                <div class="section-title">
-                  <h3 class="title">Related Posts</h3>
+    useEffect(
+        () => {
+            getBlog(blogId).then((data) => {
+                setBlog(data);
+                getUser(blog.author).then((userData) => {
+                    setUser(userData);
+                });
+            });
+        },
+        { blog, user }
+    );
+    return (
+        <>
+            <Header />
+            <Heropart blog={blog} />
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <Bodypart blog={blog} user={user} />
+                            <div>
+                                <div class="section-title">
+                                    <h3 class="title">Related Posts</h3>
+                                </div>
+                                <div class="row">
+                                    <Midpostcomponents blog={blog} />
+                                    <Midpostcomponents blog={blog} />
+                                    <Midpostcomponents blog={blog} />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <Aside_part categories={categories} />
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                  <Midpostcomponents blog={blog} />
-                  <Midpostcomponents blog={blog} />
-                  <Midpostcomponents blog={blog} />
-                </div>
-              </div>
             </div>
-
-            <div class="col-md-4">
-              <Aside_part categories={categories} />
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
+            <Footer />
+        </>
+    );
 };
 
 export default PostDetails;
